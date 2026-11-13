@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BARAT | Metal Rock Portfolio</title>
 <meta name="description" content="BARAT - Personal portfolio with minimalist metal rock aesthetic.">
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -19,7 +17,6 @@
   --line:#292929;
   --red:#b51f28;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}
 a{text-decoration:none;color:inherit}
@@ -113,84 +110,6 @@ footer span{color:var(--red)}
 .login-box h3{font-family:'Barlow Condensed';font-size:30px;margin-bottom:15px}
 .hidden{display:none!important}
 .empty{color:#777;font-size:13px;padding:20px 0}
-
-/* BARAT MUSIC PLAYER */
-.barat-music-player{
-  position:fixed;
-  left:18px;
-  bottom:18px;
-  z-index:140;
-  width:290px;
-  max-width:calc(100vw - 36px);
-  padding:14px;
-  background:#101010;
-  color:#fff;
-  border:1px solid #383838;
-  border-top:3px solid var(--red);
-  box-shadow:0 8px 30px rgba(0,0,0,.6);
-  font-family:Arial,sans-serif;
-}
-.barat-music-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:12px;
-}
-.barat-music-title{
-  font-size:16px;
-  font-weight:900;
-  letter-spacing:1px;
-}
-.barat-music-subtitle{
-  color:#aaa;
-  font-size:9px;
-  letter-spacing:1.5px;
-  margin-top:5px;
-}
-.barat-music-toggle{
-  background:var(--red);
-  color:white;
-  border:0;
-  padding:8px 10px;
-  font-size:10px;
-  font-weight:bold;
-  cursor:pointer;
-}
-.barat-music-frame{
-  width:100%;
-  aspect-ratio:16/9;
-  border:0;
-  display:block;
-  background:#000;
-}
-.barat-music-link{
-  display:block;
-  text-align:center;
-  margin-top:11px;
-  padding:10px;
-  background:#1c1c1c;
-  border:1px solid #444;
-  color:#fff;
-  font-size:11px;
-  font-weight:bold;
-  text-decoration:none;
-}
-.barat-music-link:hover{
-  background:var(--red);
-}
-.barat-music-note{
-  color:#999;
-  font-size:10px;
-  line-height:1.5;
-  margin-top:9px;
-}
-.barat-music-player.minimized{
-  width:190px;
-}
-.barat-music-player.minimized .barat-music-content{
-  display:none;
-}
-
 @media(max-width:700px){
  .menu-btn{display:block}
  .nav-links{display:none;position:absolute;top:75px;left:0;width:100%;background:#111;padding:20px;flex-direction:column;gap:18px;border-bottom:1px solid #333}
@@ -208,11 +127,9 @@ footer span{color:var(--red)}
  .cards{grid-template-columns:1fr}
  .hero h1{font-size:85px}
  .info{grid-template-columns:1fr 1fr}
- .barat-music-player{left:10px;bottom:10px;width:260px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -230,7 +147,6 @@ footer span{color:var(--red)}
 </header>
 
 <main>
-
 <section class="hero" id="home">
  <div class="container">
   <div class="hero-content">
@@ -294,7 +210,8 @@ footer span{color:var(--red)}
     <small>04 / GET IN TOUCH</small>
     <h2>LET'S CONNECT</h2>
    </div>
-   <p>Jika Ingin Bertanya - Tanya Kontak Atau Media Sosial Saya Terbuka Untuk Komunikasi & Kolaborasi & Berbagai Kesempatan Menarik.</p>
+   <p>Jika Ingin Bertanya - Tanya Kontak Atau Media Solias Saya 
+    Terbuka Untuk Komunikasi & Kolaborasi & Berbagai Kesempatan Menarik.</p>
   </div>
   <div class="contact-links">
    <a id="waLink" href="https://wa.me/" target="_blank">WHATSAPP ↗</a>
@@ -304,51 +221,9 @@ footer span{color:var(--red)}
   </div>
  </div>
 </section>
-
 </main>
 
 <footer>© <span id="year"></span> <span>BARAT</span> — BUILT WITH CHARACTER.</footer>
-
-<!-- BARAT MUSIC -->
-<div class="barat-music-player" id="baratMusicPlayer">
- <div class="barat-music-top">
-  <div>
-   <div class="barat-music-title">BARAT MUSIC</div>
-   <div class="barat-music-subtitle">METAL ROCK SOUNDTRACK</div>
-  </div>
-  <button class="barat-music-toggle" id="baratMusicToggle" type="button">
-   MINIMIZE −
-  </button>
- </div>
-
- <div class="barat-music-content">
-  
-<iframe
-  class="barat-music-frame"
-  src="https://www.youtube.com/embed/P1hzr1HDuV4?autoplay=0&controls=1&playsinline=1&loop=1&playlist=P1hzr1HDuV4"
-  title="BARAT MUSIC"
-  width="100%"
-  height="165"
-  frameborder="0"
-  referrerpolicy="origin"
-  allow="autoplay; encrypted-media; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
-
-
-  <a
-   class="barat-music-link"
-   href="https://www.youtube.com/watch?v=P1hzr1HDuV4&list=PLQLorFKSVyVWeBmUSYP_PFntzcS9eGyK1"
-   target="_blank"
-   rel="noopener noreferrer">
-   ▶ PUTAR LANGSUNG DI YOUTUBE
-  </a>
-
-  <div class="barat-music-note">
-   Musik mencoba diputar otomatis. Jika tidak berbunyi, tekan Play pada pemutar atau buka YouTube.
-  </div>
- </div>
-</div>
 
 <button class="admin-fab" onclick="openAdmin()" title="Admin Dashboard">⚙</button>
 
@@ -466,11 +341,10 @@ const defaults = {
 
 let data;
 try {
- data = JSON.parse(localStorage.getItem(KEY)) || JSON.parse(JSON.stringify(defaults));
+ data = JSON.parse(localStorage.getItem(KEY)) || structuredClone(defaults);
 } catch(e) {
  data = JSON.parse(JSON.stringify(defaults));
 }
-
 function saveData(){
  localStorage.setItem(KEY,JSON.stringify(data));
  renderAll();
@@ -481,7 +355,7 @@ function renderAll(){
  document.getElementById('profileName').textContent=data.name;
  document.getElementById('aboutText').textContent=data.about;
  document.getElementById('profileImage').src=data.profileImage;
- document.querySelector('.logo').innerHTML=escapeHTML(data.name)+'<span>.</span>';
+ document.querySelector('.logo').innerHTML=data.name+'<span>.</span>';
  document.querySelector('.hero h1').innerHTML='NO RULES.<br><span>JUST '+escapeHTML(data.name)+'.</span>';
 
  document.getElementById('projectList').innerHTML=data.projects.length
@@ -507,80 +381,52 @@ function renderAll(){
  document.getElementById('emailLink').textContent='EMAIL: '+data.contact.email+' ↗';
  document.getElementById('year').textContent=new Date().getFullYear();
 }
-
 function escapeHTML(s){
  return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
-
 function safeURL(s){
  const value=String(s||'');
  if(value.startsWith('data:image/')) return value;
- try {
-  const u=new URL(value);
-  return ['https:','http:'].includes(u.protocol)?u.href:'#';
- } catch {
-  return '#';
- }
+ try {const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:'#';}
+ catch{return '#';}
 }
 
 // NAVIGATION
 document.getElementById('menuBtn').onclick=()=>document.getElementById('navLinks').classList.toggle('open');
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 
-// BARAT MUSIC MINIMIZE
-(function(){
- const player=document.getElementById('baratMusicPlayer');
- const toggle=document.getElementById('baratMusicToggle');
-
- if(!player || !toggle) return;
-
- toggle.addEventListener('click',function(){
-  player.classList.toggle('minimized');
-  toggle.textContent=player.classList.contains('minimized')
-   ? 'SHOW MUSIC +'
-   : 'MINIMIZE −';
- });
-})();
-
 // ADMIN
 function openAdmin(){
  document.getElementById('adminModal').classList.add('show');
 }
-
 function closeAdmin(){
  document.getElementById('adminModal').classList.remove('show');
 }
-
 document.getElementById('adminModal').addEventListener('click',e=>{
  if(e.target.id==='adminModal')closeAdmin();
 });
 
 function login(){
  const pass=document.getElementById('adminPassword').value;
-
  if(pass===(localStorage.getItem(PASSKEY)||'barat123')){
   document.getElementById('loginArea').classList.add('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
-  document.getElementById('loginError').textContent='';
   loadAdmin();
  }else{
   document.getElementById('loginError').textContent='Password salah!';
  }
 }
-
 function logout(){
  document.getElementById('dashboard').classList.add('hidden');
  document.getElementById('loginArea').classList.remove('hidden');
  document.getElementById('adminPassword').value='';
 }
-
 function showPage(id,btn){
  document.querySelectorAll('.admin-page').forEach(p=>p.classList.remove('active'));
  document.querySelectorAll('.admin-nav button').forEach(b=>b.classList.remove('active'));
  document.getElementById(id).classList.add('active');
  btn.classList.add('active');
 }
-
 function loadAdmin(){
  document.getElementById('editName').value=data.name;
  document.getElementById('editAbout').value=data.about;
@@ -590,25 +436,17 @@ function loadAdmin(){
  document.getElementById('editEmail').value=data.contact.email;
  renderAdminLists();
 }
-
 function readImage(file){
  return new Promise((resolve,reject)=>{
   if(!file){resolve('');return;}
-  if(!file.type.startsWith('image/')){
-   reject(new Error('File harus berupa gambar.'));
-   return;
-  }
-  if(file.size>2*1024*1024){
-   reject(new Error('Ukuran gambar maksimal 2 MB.'));
-   return;
-  }
+  if(!file.type.startsWith('image/')){reject(new Error('File harus berupa gambar.'));return;}
+  if(file.size>2*1024*1024){reject(new Error('Ukuran gambar maksimal 2 MB.'));return;}
   const reader=new FileReader();
   reader.onload=()=>resolve(reader.result);
   reader.onerror=()=>reject(new Error('Gagal membaca gambar.'));
   reader.readAsDataURL(file);
  });
 }
-
 async function saveProfile(){
  try{
   data.name=document.getElementById('editName').value.trim()||'BARAT';
@@ -617,27 +455,16 @@ async function saveProfile(){
   if(file)data.profileImage=await readImage(file);
   saveData();
   alert('Profil berhasil disimpan.');
- }catch(e){
-  alert(e.message);
- }
+ }catch(e){alert(e.message);}
 }
-
 async function saveProject(){
  try{
   const id=document.getElementById('projectId').value;
   const title=document.getElementById('projectTitle').value.trim();
-
-  if(!title){
-   alert('Judul karya wajib diisi.');
-   return;
-  }
-
+  if(!title){alert('Judul karya wajib diisi.');return;}
   const old=data.projects.find(p=>p.id==id);
   const file=document.getElementById('projectFile').files[0];
-  const image=file
-   ? await readImage(file)
-   : (document.getElementById('projectImage').value.trim()||(old?old.image:''));
-
+  const image=file?await readImage(file):(document.getElementById('projectImage').value.trim()||(old?old.image:''));
   const project={
    id:old?old.id:Date.now(),
    title,
@@ -645,23 +472,17 @@ async function saveProject(){
    desc:document.getElementById('projectDesc').value.trim(),
    image
   };
-
   if(old)data.projects=data.projects.map(p=>p.id==id?project:p);
   else data.projects.unshift(project);
-
   resetProjectForm();
   saveData();
   renderAdminLists();
   alert('Karya berhasil disimpan.');
- }catch(e){
-  alert(e.message);
- }
+ }catch(e){alert(e.message);}
 }
-
 function editProject(id){
  const p=data.projects.find(x=>x.id===id);
  if(!p)return;
-
  document.getElementById('projectId').value=p.id;
  document.getElementById('projectTitle').value=p.title;
  document.getElementById('projectCategory').value=p.category;
@@ -670,59 +491,42 @@ function editProject(id){
  document.getElementById('projectFormTitle').textContent='EDIT KARYA';
  document.getElementById('projectPage').scrollIntoView({block:'start'});
 }
-
 function resetProjectForm(){
  ['projectId','projectTitle','projectCategory','projectDesc','projectImage','projectFile'].forEach(id=>document.getElementById(id).value='');
  document.getElementById('projectFormTitle').textContent='TAMBAH KARYA';
 }
-
 function deleteProject(id){
  if(confirm('Hapus karya ini?')){
   data.projects=data.projects.filter(p=>p.id!==id);
-  saveData();
-  renderAdminLists();
+  saveData();renderAdminLists();
  }
 }
-
 async function saveGallery(){
  try{
   const title=document.getElementById('galleryTitle').value.trim()||'Gallery image';
   const file=document.getElementById('galleryFile').files[0];
   const image=file?await readImage(file):document.getElementById('galleryImage').value.trim();
-
-  if(!image){
-   alert('Masukkan URL atau upload foto.');
-   return;
-  }
-
+  if(!image){alert('Masukkan URL atau upload foto.');return;}
   data.gallery.unshift({id:Date.now(),title,image});
   document.getElementById('galleryTitle').value='';
   document.getElementById('galleryImage').value='';
   document.getElementById('galleryFile').value='';
-  saveData();
-  renderAdminLists();
+  saveData();renderAdminLists();
   alert('Foto berhasil ditambahkan.');
- }catch(e){
-  alert(e.message);
- }
+ }catch(e){alert(e.message);}
 }
-
 function deleteGallery(id){
  if(confirm('Hapus foto ini?')){
   data.gallery=data.gallery.filter(g=>g.id!==id);
-  saveData();
-  renderAdminLists();
+  saveData();renderAdminLists();
  }
 }
-
 function renderAdminLists(){
  document.getElementById('adminProjectList').innerHTML=data.projects.map(p=>`
  <div class="admin-item">
   <span>${escapeHTML(p.title)}</span>
-  <div>
-   <button class="admin-btn secondary" onclick="editProject(${p.id})">EDIT</button>
-   <button class="admin-btn delete" onclick="deleteProject(${p.id})">HAPUS</button>
-  </div>
+  <div><button class="admin-btn secondary" onclick="editProject(${p.id})">EDIT</button>
+  <button class="admin-btn delete" onclick="deleteProject(${p.id})">HAPUS</button></div>
  </div>`).join('')||'<p class="empty">Belum ada karya.</p>';
 
  document.getElementById('adminGalleryList').innerHTML=data.gallery.map(g=>`
@@ -731,7 +535,6 @@ function renderAdminLists(){
   <button class="admin-btn delete" onclick="deleteGallery(${g.id})">HAPUS</button>
  </div>`).join('')||'<p class="empty">Belum ada foto.</p>';
 }
-
 function saveContact(){
  data.contact={
   wa:document.getElementById('editWa').value.replace(/\D/g,''),
@@ -739,27 +542,16 @@ function saveContact(){
   fb:document.getElementById('editFb').value.trim(),
   email:document.getElementById('editEmail').value.trim()
  };
-
  saveData();
  alert('Kontak berhasil diperbarui.');
 }
-
 function changePassword(){
  const old=document.getElementById('oldPassword').value;
  const current=localStorage.getItem(PASSKEY)||'barat123';
  const next=document.getElementById('newPassword').value;
  const msg=document.getElementById('passwordMessage');
-
- if(old!==current){
-  msg.textContent='Password lama salah.';
-  return;
- }
-
- if(next.length<6){
-  msg.textContent='Password baru minimal 6 karakter.';
-  return;
- }
-
+ if(old!==current){msg.textContent='Password lama salah.';return;}
+ if(next.length<6){msg.textContent='Password baru minimal 6 karakter.';return;}
  localStorage.setItem(PASSKEY,next);
  msg.textContent='Password berhasil diganti.';
  document.getElementById('oldPassword').value='';
@@ -768,6 +560,5 @@ function changePassword(){
 
 renderAll();
 </script>
-
 </body>
 </html>
