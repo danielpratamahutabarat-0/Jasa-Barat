@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="description" content="JASA BARAT - Layanan digital, gaming, desain kreatif, media sosial, dan pendampingan akademik.">
+<title>JASA BARAT — Digital Creative Service</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0b0d;
+  --panel:#131316;
+  --panel2:#19191e;
+  --white:#f5f5f5;
+  --muted:#92929b;
+  --line:rgba(255,255,255,.09);
+  --accent:#ff5733;
+  --accent2:#ff8b54;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1160px,90%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+  height:78px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(11,11,13,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:-1.5px;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a{
+  font-size:13px;
+  color:#b8b8c0;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+.nav-btn{
+  background:var(--accent);
+  color:#fff!important;
+  padding:12px 19px;
+  border-radius:7px;
+  font-weight:700;
+}
+
+.menu-btn{
+  display:none;
+  font-size:26px;
+  color:white;
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  padding:105px 0 90px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  right:-150px;
+  top:-130px;
+  background:radial-gradient(circle,rgba(255,87,51,.16),transparent 70%);
+  pointer-events:none;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:65px;
+  align-items:center;
+  position:relative;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid rgba(255,87,51,.35);
+  color:#ff9a80;
+  padding:9px 14px;
+  border-radius:50px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+.eyebrow:before{
+  content:"";
+  width:7px;
+  height:7px;
+  background:var(--accent);
+  border-radius:50%;
+  box-shadow:0 0 12px var(--accent);
+}
+
+.hero h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(45px,6vw,78px);
+  line-height:1.04;
+  letter-spacing:-4px;
+  margin:27px 0 22px;
+}
+
+.hero h1 span{
+  color:var(--accent);
+}
+
+.hero-desc{
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+  max-width:530px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:13px;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:15px 23px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:#e94825;
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  border:1px solid var(--line);
+  color:white;
+}
+
+.btn-outline:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.hero-visual{
+  position:relative;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.visual-card{
+  width:100%;
+  max-width:390px;
+  min-height:330px;
+  background:linear-gradient(145deg,#202024,#111114);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  padding:35px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+
+.visual-card:after{
+  content:"JB";
+  position:absolute;
+  right:-15px;
+  bottom:-80px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:260px;
+  font-weight:800;
+  color:rgba(255,255,255,.035);
+}
+
+.visual-label{
+  color:var(--accent2);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.visual-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:37px;
+  font-weight:700;
+  line-height:1.1;
+  margin-top:55px;
+  position:relative;
+  z-index:1;
+}
+
+.visual-title span{
+  color:var(--accent);
+}
+
+.visual-bottom{
+  position:absolute;
+  bottom:30px;
+  left:35px;
+  right:35px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#999;
+  font-size:11px;
+  z-index:2;
+}
+
+.visual-icon{
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:var(--accent);
+  font-size:21px;
+}
+
+/* STATS */
+
+.stats{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:28px 0;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.stat{
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+  border:0;
+}
+
+.stat h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:27px;
+}
+
+.stat p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:5px;
+}
+
+/* SECTION */
+
+section{
+  padding:95px 0;
+}
+
+.section-head{
+  max-width:650px;
+  margin-bottom:42px;
+}
+
+.section-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(32px,4vw,48px);
+  letter-spacing:-2px;
+  margin:13px 0;
+}
+
+.section-head p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.service-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:30px;
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(255,87,51,.55);
+  background:#18181c;
+}
+
+.service-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:rgba(255,87,51,.12);
+  color:var(--accent2);
+  font-size:22px;
+  margin-bottom:22px;
+}
+
+.service-card h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:20px;
+  margin-bottom:17px;
+}
+
+.service-card ul{
+  list-style:none;
+}
+
+.service-card li{
+  color:var(--muted);
+  font-size:13px;
+  padding:10px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.service-card li:last-child{
+  border:0;
+}
+
+/* WHY US */
+
+.why{
+  background:#101013;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.why-card{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#151519;
+}
+
+.why-card .number{
+  color:var(--accent);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:27px;
+  font-weight:700;
+}
+
+.why-card h3{
+  font-size:15px;
+  margin:18px 0 10px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact-box{
+  background:linear-gradient(120deg,#29150f,#171316 65%,#21120e);
+  border:1px solid rgba(255,87,51,.23);
+  border-radius:18px;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:35px;
+  align-items:center;
+}
+
+.contact-box h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(30px,4vw,45px);
+  letter-spacing:-2px;
+  margin:15px 0;
+}
+
+.contact-box p{
+  color:#b6a9a5;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.contact-list{
+  display:grid;
+  gap:12px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:15px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:9px;
+  transition:.3s;
+}
+
+.contact-item:hover{
+  border-color:var(--accent);
+  transform:translateX(4px);
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,87,51,.15);
+  border-radius:9px;
+  color:var(--accent2);
+  font-size:18px;
+  flex-shrink:0;
+}
+
+.contact-item small{
+  display:block;
+  color:#999;
+  font-size:10px;
+  margin-bottom:4px;
+}
+
+.contact-item strong{
+  font-size:12px;
+  overflow-wrap:anywhere;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-copy{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.footer-social{
+  display:flex;
+  gap:20px;
+  font-size:12px;
+  color:#aaa;
+}
+
+.footer-social a:hover{
+  color:var(--accent);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .hero-grid{
+    gap:25px;
+  }
+
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:700px){
+  nav{
+    height:68px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+    background:#111114;
+    padding:22px 5%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:20px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-btn{
+    text-align:center;
+  }
+
+  .hero{
+    padding:75px 0 65px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    letter-spacing:-2.5px;
+  }
+
+  .hero-visual{
+    min-height:340px;
+  }
+
+  .visual-card{
+    min-height:300px;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats-grid{
+    gap:8px;
+  }
+
+  .stat h3{
+    font-size:22px;
+  }
+
+  .stat p{
+    font-size:10px;
+  }
+
+  .contact-box{
+    padding:30px 22px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:420px){
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="container nav-inner">
+
+    <a href="#home" class="logo">JASA <span>BARAT.</span></a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Beranda</a>
+      <a href="#services">Layanan</a>
+      <a href="#about">Keunggulan</a>
+      <a href="#contact">Kontak</a>
+      <a class="nav-btn" href="https://wa.me/628884328532" target="_blank" rel="noopener">Hubungi Kami ↗</a>
+    </div>
+
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Digital Creative Service</div>
+
+      <h1>
+        Solusi Digital<br>
+        Untuk <span>Ide Besar.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Selamat datang di JASA BARAT. Kami menyediakan berbagai layanan
+        digital, gaming, desain kreatif, media sosial, pengembangan
+        website, serta pendampingan akademik untuk mahasiswa dan pelajar.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#services">Jelajahi Layanan ↗</a>
+        <a class="btn btn-outline" href="https://wa.me/628884328532" target="_blank" rel="noopener">Konsultasi Gratis</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-card">
+        <div class="visual-label">CREATIVE DIGITAL PARTNER</div>
+
+        <div class="visual-title">
+          MAKE IT<br>
+          <span>BETTER.</span><br>
+          MAKE IT<br>
+          HAPPEN.
+        </div>
+
+        <div class="visual-bottom">
+          <span>JASA BARAT — DIGITAL SERVICE</span>
+          <div class="visual-icon">✦</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<div class="stats">
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <h3>04</h3>
+      <p>Kategori Layanan</p>
+    </div>
+
+    <div class="stat">
+      <h3>24/7</h3>
+      <p>Konsultasi Melalui Kontak</p>
+    </div>
+
+    <div class="stat">
+      <h3>100%</h3>
+      <p>Fokus Pada Kebutuhan Anda</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- LAYANAN -->
+<section id="services">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-tag">Our Services</div>
+      <h2>Layanan Kami</h2>
+      <p>
+        Beragam solusi digital dan pendidikan dalam satu tempat.
+        Pilih layanan yang sesuai dengan kebutuhan Anda.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- GAMING -->
+      <div class="service-card">
+        <div class="service-icon">🎮</div>
+        <h3>Gaming Services</h3>
+        <ul>
+          <li>Joki Game</li>
+          <li>Cheat & Mod</li>
+          <li>Achievement & Event</li>
+          <li>Gaming Coaching</li>
+          <li>Thumbnail Gaming</li>
+          <li>Editing Gameplay</li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Social Media Services</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>YouTube</li>
+          <li>TikTok</li>
+          <li>Facebook</li>
+          <li>Telegram</li>
+          <li>Shopee, X & Threads</li>
+        </ul>
+      </div>
+
+      <!-- DIGITAL CREATIVE -->
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Digital Creative Services</h3>
+        <ul>
+          <li>Editing Video</li>
+          <li>Editing Foto</li>
+          <li>Logo & Branding</li>
+          <li>Pembuatan Website</li>
+          <li>Digital Marketing</li>
+          <li>Konsultasi Digital</li>
+        </ul>
+      </div>
+
+      <!-- ACADEMIC -->
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>Academic & Education Services</h3>
+        <ul>
+          <li>Bantuan dan Bimbingan Tugas Kuliah</li>
+          <li>Penyusunan dan Editing Makalah</li>
+          <li>Bimbingan dan Konsultasi Skripsi</li>
+          <li>Bantuan Belajar dan Tugas Sekolah</li>
+          <li>Pembuatan PPT Presentasi</li>
+          <li>Proofreading & Editing Dokumen</li>
+          <li>Format Dokumen dan Daftar Pustaka</li>
+          <li>Bimbingan Penelitian</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="why" id="about">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-tag">Why Choose Us</div>
+      <h2>Mengapa JASA BARAT?</h2>
+      <p>
+        Kami berkomitmen memberikan pengalaman layanan yang mudah,
+        praktis, dan sesuai kebutuhan pelanggan.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="number">01</div>
+        <h3>Proses Praktis</h3>
+        <p>Pemesanan layanan mudah dan komunikasi langsung dengan kami.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="number">02</div>
+        <h3>Privasi Terjaga</h3>
+        <p>Informasi pelanggan ditangani dengan penuh tanggung jawab.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="number">03</div>
+        <h3>Harga Kompetitif</h3>
+        <p>Pilihan layanan dengan harga yang dapat disesuaikan kebutuhan.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="number">04</div>
+        <h3>Responsif</h3>
+        <p>Kami siap menerima pertanyaan dan konsultasi melalui kontak yang tersedia.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="contact">
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div>
+        <div class="section-tag">Get In Touch</div>
+
+        <h2>
+          Punya Ide?<br>
+          <span style="color:var(--accent)">Mari Wujudkan.</span>
+        </h2>
+
+        <p>
+          Jangan ragu untuk menghubungi kami. Ceritakan kebutuhan Anda
+          dan mari temukan solusi digital yang tepat bersama JASA BARAT.
+        </p>
+
+        <br>
+
+        <a class="btn btn-primary" href="https://wa.me/628884328532" target="_blank" rel="noopener">
+          Hubungi via WhatsApp ↗
+        </a>
+      </div>
+
+      <div class="contact-list">
+
+        <a class="contact-item"
+           href="https://wa.me/628884328532"
+           target="_blank" rel="noopener">
+          <div class="contact-icon">✆</div>
+          <div>
+            <small>WHATSAPP</small>
+            <strong>08884328532</strong>
+          </div>
+        </a>
+
+        <a class="contact-item"
+           href="https://www.instagram.com/jasabarat.01?mdxt=MTM2ODFtcGg1OHE5Mg=="
+           target="_blank" rel="noopener">
+          <div class="contact-icon">◎</div>
+          <div>
+            <small>INSTAGRAM</small>
+            <strong>@jasabarat.01</strong>
+          </div>
+        </a>
+
+        <a class="contact-item"
+           href="mailto:jasabarat01@gmail.com">
+          <div class="contact-icon">✉</div>
+          <div>
+            <small>EMAIL</small>
+            <strong>jasabarat01@gmail.com</strong>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+
+    <div>
+      <a href="#home" class="logo">JASA <span>BARAT.</span></a>
+
+      <p class="footer-copy" style="margin-top:9px">
+        © <span id="year"></span> JASA BARAT. All Rights Reserved.
+      </p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/jasabarat.01?mdxt=MTM2ODFtcGg1OHE5Mg==" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:jasabarat01@gmail.com">Email</a>
+      <a href="https://wa.me/628884328532" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+  navLinks.classList.toggle("active");
+
+  menuBtn.textContent =
+    navLinks.classList.contains("active") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+  link.addEventListener("click", function(){
+    navLinks.classList.remove("active");
+    menuBtn.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
